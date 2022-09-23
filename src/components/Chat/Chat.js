@@ -26,7 +26,7 @@ function Chat() {
   });
 
   useEffect(() => {
-    socket = io.connect("http://localhost:8000");
+    socket = io.connect("https://realtime-backend-app.herokuapp.com/");
     const data = {
       name: name,
       room: room,
@@ -45,7 +45,7 @@ function Chat() {
       setUsers(users)
     })
   }, []);
-  console.log(messages);
+  
   //function for sending message
   const sendMessage = (event) => {
     event.preventDefault();
